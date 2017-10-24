@@ -14,7 +14,7 @@ class ApisController < ApplicationController
 		doc = Nokogiri::HTML(document)
 
 		cardapios = []
-		byebug
+		
 		doc.css('div.info').drop(4).each do |elem| 
 			nome = elem.css('a.headline-clickable h3').text
 			cardapio = {}
